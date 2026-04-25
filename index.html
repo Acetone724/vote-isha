@@ -20,7 +20,7 @@
             color: var(--brown);
             overflow-x: hidden;
         }
-        h1, h2, h3, .bold-font { font-family: 'Outfit', sans-serif; text-transform: uppercase; }
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; text-transform: uppercase; }
 
         /* Floating Pizzazz */
         .floating-icon {
@@ -93,7 +93,6 @@
             <div class="text-xl font-black italic tracking-tighter">ISHA MEHANNA</div>
         </div>
         <div class="hidden md:flex items-center gap-8 font-bold text-sm">
-            <a href="#mission" class="hover:text-orange-500 transition">MISSION</a>
             <a href="#goals" class="hover:text-orange-500 transition">GOALS</a>
             <a href="#vote" class="cta-button px-6 py-2 rounded-xl text-white bg-[#74512D] border-none shadow-none">VOTE NOW</a>
         </div>
@@ -118,8 +117,8 @@
 
         <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
             <div class="relative">
-                <div class="w-56 h-56 md:w-72 md:h-72 rounded-[3rem] border-4 border-brown bg-white overflow-hidden shadow-[12px_12px_0px_#74512D]">
-                    <img src="https://via.placeholder.com/400" alt="Isha Photo" class="w-full h-full object-cover">
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-[3rem] border-4 border-brown bg-white overflow-hidden shadow-[12px_12px_0px_#74512D]">
+                    <img src="image_d46ef7.jpg" alt="Isha Photo" class="w-full h-full object-cover">
                 </div>
                 <div class="absolute -bottom-4 -right-4 bg-white border-4 border-brown px-4 py-2 rounded-xl font-black text-xl rotate-12 shadow-lg">CLASS 9A</div>
             </div>
@@ -139,7 +138,7 @@
 
     <div class="marquee border-y-8 border-brown my-20">
         <div class="marquee-content">
-            VOTE ISHA MEHANNA • VICE SPORTS CAPTAIN • CLASS 9A • VOTE ISHA MEHANNA • VICE SPORTS CAPTAIN • CLASS 9A • VOTE ISHA MEHANNA • VICE SPORTS CAPTAIN • CLASS 9A • 
+            VOTE ISHA MEHANNA • VICE SPORTS CAPTAIN • CLASS 9A • VOTE ISHA MEHANNA • VICE SPORTS CAPTAIN • CLASS 9A • 
         </div>
     </div>
 
@@ -162,12 +161,31 @@
             <div class="bento-card p-10 bg-white">
                 <div class="text-6xl mb-8">🏆</div>
                 <h3 class="text-2xl font-black mb-4">NEW MINI-LEAGUES</h3>
-                <p class="text-lg font-bold opacity-80">I'll advocate for more inter-class tournaments. More matches means more fun and school spirit for all grades!</p>
+                <p class="text-lg font-bold opacity-80">I'll advocate for more inter-class tournaments. More matches means more fun for all grades!</p>
             </div>
         </div>
     </section>
 
-    <section class="bg-white border-y-8 border-brown py-28 text-center px-6 mx-4 rounded-[4rem]">
-        <p class="text-brown font-black mb-4 tracking-widest">OFFICIAL MOTTO</p>
-        <h2 class="text-4xl md:text-6xl font-black italic mb-8">"Your Voice, Our Vision, One Team."</h2>
-        <div class="h
+    <footer id="vote" class="py-32 text-center px-6 border-t-8 border-brown bg-white">
+        <div class="mb-16">
+            <h3 class="text-3xl font-black mb-4 uppercase italic">"Your Voice, Our Vision, One Team."</h3>
+            <p class="text-xl font-bold opacity-60">Al Yasmin International School • 2026 Elections</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+            <div class="bento-card bg-white px-16 py-10 text-5xl font-black">ISHA</div>
+            <div class="text-5xl font-black text-[#E29578]">FOR</div>
+            <div class="bento-card bg-[#74512D] text-white px-10 py-10 text-4xl font-black shadow-[12px_12px_0px_#AF8260]">VICE SPORTS CAPTAIN</div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
