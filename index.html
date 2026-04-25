@@ -22,6 +22,7 @@
         }
         h1, h2, h3 { font-family: 'Outfit', sans-serif; text-transform: uppercase; }
 
+        /* Floating Pizzazz */
         .floating-icon {
             position: absolute;
             font-size: 3.5rem;
@@ -36,6 +37,7 @@
             66% { transform: translate(-30px, 30px) rotate(-15deg); }
         }
 
+        /* Marquee */
         .marquee {
             white-space: nowrap;
             overflow: hidden;
@@ -55,6 +57,7 @@
         }
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
+        /* Bento Styling */
         .bento-card {
             background: white;
             border: 5px solid var(--brown);
@@ -62,16 +65,7 @@
             transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border-radius: 24px;
         }
-        
-        /* Fixed Logo Container to ensure it fits */
-        .logo-container {
-            background: white;
-            border: 6px solid var(--brown);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
+        .bento-card:hover { transform: translate(-5px, -5px); box-shadow: 18px 18px 0px var(--clay); }
 
         .cta-button {
             background: var(--accent);
@@ -79,23 +73,34 @@
             box-shadow: 6px 6px 0px var(--brown);
             transition: 0.2s;
         }
+        .cta-button:hover { transform: translate(-3px, -3px); box-shadow: 10px 10px 0px var(--brown); }
+
+        .logo-img { mix-blend-mode: multiply; }
     </style>
 </head>
 <body>
 
+    <div class="floating-icon" style="top: 15%; left: 8%;">⚽</div>
+    <div class="floating-icon" style="top: 45%; right: 7%;">🏀</div>
+    <div class="floating-icon" style="bottom: 15%; left: 10%;">🏃‍♀️</div>
+    <div class="floating-icon" style="top: 75%; right: 12%;">🥇</div>
+
     <nav class="fixed top-0 w-full z-50 bg-white border-b-4 border-brown px-6 py-3 flex justify-between items-center">
         <div class="flex items-center gap-3">
-            <div class="w-14 h-14 rounded-xl logo-container bg-beige">
-                <img src="image_df3a17.jpg" alt="Logo" class="w-full h-full object-contain p-1">
+            <div class="w-12 h-12 rounded-lg bg-beige border-2 border-brown overflow-hidden">
+                <img src="image_df3a17.jpg" alt="Logo" class="logo-img w-full h-full object-cover">
             </div>
             <div class="text-xl font-black italic tracking-tighter">ISHA MEHANNA</div>
         </div>
-        <a href="#vote" class="cta-button px-6 py-2 rounded-xl text-white font-bold text-sm">VOTE NOW</a>
+        <div class="hidden md:flex items-center gap-8 font-bold text-sm">
+            <a href="#goals" class="hover:text-orange-500 transition">GOALS</a>
+            <a href="#vote" class="cta-button px-6 py-2 rounded-xl text-white bg-[#74512D] border-none shadow-none">VOTE NOW</a>
+        </div>
     </nav>
 
     <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center relative pt-24">
-        <div class="w-40 h-40 md:w-56 md:h-56 rounded-full logo-container bento-card mb-8">
-            <img src="image_df3a17.jpg" alt="Campaign Logo" class="w-full h-full object-contain p-4">
+        <div class="w-32 h-32 md:w-48 md:h-48 rounded-full bento-card bg-white mb-8 flex items-center justify-center overflow-hidden">
+            <img src="image_df3a17.jpg" alt="Isha Campaign Logo" class="logo-img w-full h-full object-contain p-2">
         </div>
 
         <div class="inline-block px-6 py-2 bg-white border-4 border-brown rounded-2xl mb-6 font-black text-sm uppercase tracking-widest">
@@ -113,7 +118,7 @@
         <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
             <div class="relative">
                 <div class="w-64 h-64 md:w-80 md:h-80 rounded-[3rem] border-4 border-brown bg-white overflow-hidden shadow-[12px_12px_0px_#74512D]">
-                    <img src="image_d46ef7.jpg" alt="Isha Profile" class="w-full h-full object-cover">
+                    <img src="image_d46ef7.jpg" alt="Isha Profile Photo" class="w-full h-full object-cover">
                 </div>
                 <div class="absolute -bottom-4 -right-4 bg-white border-4 border-brown px-4 py-2 rounded-xl font-black text-xl rotate-12 shadow-lg">CLASS 9A</div>
             </div>
@@ -121,3 +126,66 @@
             <div class="max-w-sm text-left">
                 <p class="text-xl font-bold leading-tight">
                     "I believe I am confident and very capable of leading this position. Let's make sports at Al Yasmin better for everyone."
+                </p>
+                <div class="mt-4 h-2 w-20 bg-brown rounded-full"></div>
+            </div>
+        </div>
+
+        <a href="#goals" class="cta-button text-white text-xl font-black px-16 py-6 rounded-[2rem]">
+            EXPLORE THE VISION
+        </a>
+    </section>
+
+    <div class="marquee border-y-8 border-brown my-20">
+        <div class="marquee-content">
+            VOTE ISHA MEHANNA • VICE SPORTS CAPTAIN • CLASS 9A • VOTE ISHA MEHANNA • VICE SPORTS CAPTAIN • CLASS 9A • 
+        </div>
+    </div>
+
+    <section id="goals" class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-5xl md:text-7xl font-black mb-20 text-center italic">THE GAME PLAN</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div class="bento-card p-10 bg-white">
+                <div class="text-6xl mb-8">💪</div>
+                <h3 class="text-2xl font-black mb-4">CONFIDENT LEADERSHIP</h3>
+                <p class="text-lg font-bold opacity-80">As your Vice Sports Captain, I will be the bridge between students and the sports board. Every voice matters.</p>
+            </div>
+
+            <div class="bento-card p-10 bg-beige">
+                <div class="text-6xl mb-8">🎾</div>
+                <h3 class="text-2xl font-black mb-4">EQUIPMENT FIRST</h3>
+                <p class="text-lg font-bold opacity-80">Ensuring our sports gear is maintained and accessible. I am capable of managing the details so you can just play.</p>
+            </div>
+
+            <div class="bento-card p-10 bg-white">
+                <div class="text-6xl mb-8">🏆</div>
+                <h3 class="text-2xl font-black mb-4">NEW MINI-LEAGUES</h3>
+                <p class="text-lg font-bold opacity-80">I'll advocate for more inter-class tournaments. More matches means more fun for all grades!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="vote" class="py-32 text-center px-6 border-t-8 border-brown bg-white">
+        <div class="mb-16">
+            <h3 class="text-3xl font-black mb-4 uppercase italic">"Your Voice, Our Vision, One Team."</h3>
+            <p class="text-xl font-bold opacity-60">Al Yasmin International School • 2026 Elections</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+            <div class="bento-card bg-white px-16 py-10 text-5xl font-black">ISHA</div>
+            <div class="text-5xl font-black text-[#E29578]">FOR</div>
+            <div class="bento-card bg-[#74512D] text-white px-10 py-10 text-4xl font-black shadow-[12px_12px_0px_#AF8260]">VICE SPORTS CAPTAIN</div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
